@@ -1,0 +1,21 @@
+# Criar a venv (caso ainda não criou)
+python -m venv .venv
+
+# ativar a venv
+.venv\Scripts\Activate.ps1
+
+# instalar a uvicorn / fastapi
+pip install fastapi uvicorn
+
+# caso de errado, tentar:
+pip install fastapi uvicorn --trusted-host pypi.org --trusted-host files.pythonhosted.org
+
+# verificar se o uvicorn está instalado
+pip list
+
+# verificar se está na env
+.venv\Scripts\activate
+
+# rodar a API 
+python -m uvicorn app.main:app --reload
+
